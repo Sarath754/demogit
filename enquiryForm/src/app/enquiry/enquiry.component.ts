@@ -26,7 +26,10 @@ message:[""],
 
   
 
-  constructor(private fb:FormBuilder,private router:Router) { }
+  constructor(private fb:FormBuilder,private router:Router) { 
+  }
+
+
 
   ngOnInit(): void {
   }
