@@ -1,0 +1,30 @@
+<!-- <p>login works!</p> -->
+<div class="container">
+
+    <div class="main">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <h1>Login SBI Bank</h1>
+            </div>
+            <div class="col"></div>
+        </div>
+
+
+
+        <div class="mb-3" [formGroup]="loginForm">
+            <label for="exampleInputEmail1" class="form-label">UserName</label>
+            <input type="text" formControlName="username" name="username"  class="form-control" id="username" aria-describedby="emailHelp">
+            <!-- (change)="onUsernameChange($event)" -->
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" formControlName="password" name="password" class="form-control" id="password">
+            <!-- //(change)="onPasswordChange($event)" -->
+        </div>
+
+        <button type="button" (click)="login()" class="btn btn-primary">Login</button>
+    
+    </div>
+</div>

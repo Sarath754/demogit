@@ -1,0 +1,70 @@
+<!-- <p>enquiry works!</p> -->
+
+
+<div class="container">
+
+    <div class="jumbotron">
+
+        <h1>ENQUIRY FORM</h1>
+
+
+        <form [formGroup]="enquiryform">
+
+
+            <div class="mb-3">
+
+                <label for=""> Name</label>
+
+                <input type="text" formControlName="name" name="name" id="" class="form-control">
+
+            </div>
+
+            <div class="mb-3">
+
+                <label for="">Phone Number</label>
+
+                <input type="text" formControlName="phoneNumber" name="phonenumber" id="" class="form-control">
+
+            </div>
+
+
+            <div class="mb-3">
+
+                <label for="">E-mail</label>
+
+                <input type="text" formControlName="email" name="email" id="" class="form-control">
+
+            </div>
+
+
+            <div class="mb-3">
+
+                <label for="">Message</label>
+
+                <input type="text" formControlName="message" name="message" id="" class="form-control">
+
+            </div>
+
+            <hr>
+            <div class="mb-3">
+
+                <button (click)="sumbit()" class="btn btn-primary">Sumbit</button>
+
+            </div>
+
+
+        </form>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+</div>
