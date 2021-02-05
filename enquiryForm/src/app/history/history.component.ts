@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EnquiryService } from '../services/enquiry.service';
 
 @Component({
   selector: 'app-history',
@@ -8,14 +9,20 @@ import { Component, OnInit } from '@angular/core';
 export class HistoryComponent implements OnInit {
 
 
-  history=[
+  enquiries:{ name: string, phonenumber: string, email: string, message: string}[]=[
 
-    {name:"sarath",phonenumber:8281121153,email:"@gmail",message:"dhoni"}
+    // {name:"",phonenumber:"",email:"",message:""}
+
   ];
 
-  constructor() { }
+  constructor(private EnquiryService:EnquiryService) { 
 
+    this.enquiries=EnquiryService.getEnquiries();
+
+  }
   ngOnInit(): void {
   }
+
+
 
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
+import { EnquiryService } from '../services/enquiry.service';
 
 @Component({
   selector: 'app-enquiry',
@@ -26,7 +27,7 @@ message:[""],
 
   
 
-  constructor(private fb:FormBuilder,private router:Router) { 
+  constructor(private fb:FormBuilder,private router:Router,private EnquiryService:EnquiryService) { 
   }
 
 
@@ -38,10 +39,20 @@ message:[""],
 
   sumbit(){
 
-    this.router.navigateByUrl("/history")
+    
 
+    const name=this.enquiryform.value.name;
+
+    const phoneNumber=this.enquiryform.value.phoneNumber;
+
+    const email=this.enquiryform.value.email;
+
+    const message=this.enquiryform.value.message;
+
+    
+this.EnquiryService.sumbit(name,phoneNumber,email,message)
    
-
+this.router.navigateByUrl("/history")
   }
 
 }
